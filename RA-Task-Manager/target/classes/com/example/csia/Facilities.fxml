@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csia.FacilityController">
+   <children>
+      <AnchorPane prefHeight="61.0" prefWidth="900.0" style="-fx-background-color: #1e90ff;">
+         <children>
+            <ButtonBar layoutX="6.0" layoutY="3.0" prefHeight="50.0" prefWidth="828.0">
+              <buttons>
+                <Button mnemonicParsing="false" onAction="#onHomeClick" prefHeight="35.0" text="Home">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="140.0" layoutY="17.0" mnemonicParsing="false" onAction="#onStudentsClick" prefHeight="35.0" text="Students">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="140.0" layoutY="17.0" mnemonicParsing="false" onAction="#onComplaintsClick" prefHeight="35.0" prefWidth="250.0" text="Complaints">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="588.0" layoutY="18.0" mnemonicParsing="false" onAction="#onDisputesClick" prefHeight="35.0" prefWidth="250.0" text="Disputes">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+              </buttons>
+            </ButtonBar>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="72.0" prefWidth="900.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="293.0" layoutY="13.0" stroke="WHITE" strokeType="INSIDE" width="298.0" />
+            <Label layoutX="382.0" layoutY="17.0" text="Facilities">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="71.0" prefWidth="900.0">
+         <children>
+            <ButtonBar layoutX="99.0" layoutY="14.0" prefHeight="40.0" prefWidth="681.0">
+               <buttons>
+                  <Button mnemonicParsing="false" onAction="#onAddFacilityClick" prefHeight="35.0" prefWidth="245.0" text="Add Facility">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#onDeleteFacilityClick" prefHeight="35.0" prefWidth="130.0" text="Delete Facility">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#onUpdateFacilityClick" prefHeight="35.0" prefWidth="130.0" text="Update Facility">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#refreshTable" prefHeight="35.0" prefWidth="130.0" text="Refresh">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </buttons>
+            </ButtonBar>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="72.0" prefWidth="900.0">
+         <children>
+            <Label layoutX="201.0" layoutY="9.0" text="Facility ID">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="searchText" layoutX="315.0" layoutY="7.0" prefHeight="34.0" prefWidth="278.0" />
+            <Button layoutX="612.0" layoutY="6.0" mnemonicParsing="false" onAction="#onSearchFacilityClick" prefHeight="35.0" prefWidth="106.0" text="Search">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="facilityTable" prefHeight="399.0" prefWidth="900.0">
+        <columns>
+          <TableColumn fx:id="facilityID" prefWidth="75.0" text="Facility ID" />
+          <TableColumn fx:id="roomID" prefWidth="75.0" text="Room ID" />
+            <TableColumn fx:id="floor" prefWidth="75.0" text="Floor" />
+            <TableColumn fx:id="maintenanceStatus" prefWidth="75.0" text="Maintenance Status" />
+            <TableColumn fx:id="type" prefWidth="75.0" text="Type" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</VBox>
