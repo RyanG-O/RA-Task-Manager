@@ -129,6 +129,6 @@ Through this project, I developed both technical and problem-solving skills:
 
 ---
 
-## 📷 Demo (Optional)
+## 📷 Demo
 
 ![Demo](DemoGif.gif)
